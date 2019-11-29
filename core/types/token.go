@@ -3,13 +3,14 @@ package types
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/QuarkChain/goquarkchain/serialize"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/rlp"
 	"io"
 	"math/big"
 	"sort"
 	"strings"
+
+	"github.com/QuarkChain/goquarkchain/rlp"
+	"github.com/QuarkChain/goquarkchain/serialize"
+	"github.com/ethereum/go-ethereum/common"
 )
 
 type TokenBalancePair struct {

@@ -1,4 +1,4 @@
-// Copyright 2015 The go-ethereum Authors
+// Copyright 2014 The go-ethereum Authors
 // This file is part of the go-ethereum library.
 //
 // The go-ethereum library is free software: you can redistribute it and/or modify
@@ -14,28 +14,33 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with the go-ethereum library. If not, see <http://www.gnu.org/licenses/>.
 
-package state
+package rlp
 
 import (
-	"bytes"
-
-	"github.com/QuarkChain/goquarkchain/rlp"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/trie"
+	"fmt"
+	"io"
 )
 
-// NewStateSync create a new state trie download scheduler.
-func NewStateSync(root common.Hash, database trie.DatabaseReader) *trie.Sync {
-	var syncer *trie.Sync
-	callback := func(leaf []byte, parent common.Hash) error {
-		var obj Account
-		if err := rlp.Decode(bytes.NewReader(leaf), &obj); err != nil {
-			return err
-		}
-		syncer.AddSubTrie(obj.Root, 64, parent, nil)
-		syncer.AddRawEntry(common.BytesToHash(obj.CodeHash), 64, parent)
-		return nil
-	}
-	syncer = trie.NewSync(root, database, callback)
-	return syncer
+type MyCoolType struct {
+	Name string
+	a, b uint
+}
+
+// EncodeRLP writes x as RLP list [a, b] that omits the Name field.
+func (x *MyCoolType) EncodeRLP(w io.Writer) (err error) {
+	return Encode(w, []uint{x.a, x.b})
+}
+
+func ExampleEncoder() {
+	var t *MyCoolType // t is nil pointer to MyCoolType
+	bytes, _ := EncodeToBytes(t)
+	fmt.Printf("%v → %X\n", t, bytes)
+
+	t = &MyCoolType{Name: "foobar", a: 5, b: 6}
+	bytes, _ = EncodeToBytes(t)
+	fmt.Printf("%v → %X\n", t, bytes)
+
+	// Output:
+	// <nil> → C0
+	// &{foobar 5 6} → C20506
 }

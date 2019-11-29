@@ -20,15 +20,16 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/QuarkChain/goquarkchain/cluster/config"
 	"io"
 	"io/ioutil"
 	"sync/atomic"
 	"time"
 
+	"github.com/QuarkChain/goquarkchain/cluster/config"
+
+	"github.com/QuarkChain/goquarkchain/rlp"
 	"github.com/ethereum/go-ethereum/event"
 	"github.com/ethereum/go-ethereum/p2p/enode"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 // Msg defines the structure of a p2p message.

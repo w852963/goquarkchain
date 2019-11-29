@@ -35,12 +35,12 @@ import (
 	"sync"
 	"time"
 
+	"github.com/QuarkChain/goquarkchain/rlp"
 	"github.com/ethereum/go-ethereum/common/bitutil"
 	"github.com/ethereum/go-ethereum/crypto"
 	"github.com/ethereum/go-ethereum/crypto/ecies"
 	"github.com/ethereum/go-ethereum/crypto/secp256k1"
 	"github.com/ethereum/go-ethereum/crypto/sha3"
-	"github.com/ethereum/go-ethereum/rlp"
 	"github.com/golang/snappy"
 )
 

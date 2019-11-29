@@ -22,14 +22,16 @@ import (
 	"crypto/ecdsa"
 	"encoding/hex"
 	"errors"
-	"github.com/QuarkChain/goquarkchain/p2p/nodefilter"
 	"net"
 	"sort"
 	"sync"
 	"sync/atomic"
 	"time"
 
+	"github.com/QuarkChain/goquarkchain/p2p/nodefilter"
+
 	"github.com/QuarkChain/goquarkchain/p2p/discover"
+	"github.com/QuarkChain/goquarkchain/rlp"
 	"github.com/ethereum/go-ethereum/common"
 	"github.com/ethereum/go-ethereum/common/mclock"
 	"github.com/ethereum/go-ethereum/crypto"
@@ -40,7 +42,6 @@ import (
 	"github.com/ethereum/go-ethereum/p2p/enr"
 	"github.com/ethereum/go-ethereum/p2p/nat"
 	"github.com/ethereum/go-ethereum/p2p/netutil"
-	"github.com/ethereum/go-ethereum/rlp"
 )
 
 const (
