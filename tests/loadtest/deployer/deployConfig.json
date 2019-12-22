@@ -1,39 +1,175 @@
 {
-  "DockerName": "quarkchaindocker/goquarkchain",
-  "Hosts": [
-    {
-      "IP": "xxx.xxx.xxx.xxx",
-      "Port": 22,
-      "User": "root",
-      "Password": "xxxxxxx",
-      "IsMaster":true,
-      "SlaveNumber": 1,
-      "ClusterID": 0
-    },
-    {
-      "IP": "xxx.xxx.xxx.xxx",
-      "Port": 22,
-      "User": "root",
-      "Password": "xxxxxxx",
-      "IsMaster":true,
-      "SlaveNumber": 1,
-      "ClusterID": 1
-    },
-    {
-      "IP": "xxx.xxx.xxx.xxx",
-      "Port": 22,
-      "User": "root",
-      "Password": "xxxxxxx",
-      "IsMaster":true,
-      "SlaveNumber": 1,
-      "ClusterID": 2
-    }
-  ],
-  "CHAIN_SIZE": 4,
-  "SHARD_SIZE": 8,
-  "ExtraClusterConfig": {
-    "TargetRootBlockTime": 20,
-    "TargetMinorBlockTime": 4,
-    "GasLimit": 96000000
-  }
+	"DockerName": "quarkchaindocker/goquarkchain",
+	"Hosts": [{
+			"IP": "172.21.16.16",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": true,
+			"SlaveNumber": 16,
+			"ClusterID": 0
+		}, {
+			"IP": "172.21.16.22",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": true,
+			"SlaveNumber": 4,
+			"ClusterID": 1
+		},
+		{
+			"IP": "172.21.16.14",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 1
+		},
+		{
+			"IP": "172.21.16.5",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 1
+		},
+		{
+			"IP": "172.21.16.38",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 1
+		}, {
+			"IP": "172.21.16.20",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 1
+		}, {
+			"IP": "172.21.16.56",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 1
+		},{
+			"IP": "172.21.16.25",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": true,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.6",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.62",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		}, {
+			"IP": "172.21.16.12",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.4",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		}, {
+			"IP": "172.21.16.9",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.33",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 2
+		}, {
+			"IP": "172.21.16.36",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.23",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 8,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.65",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.54",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		},
+		{
+			"IP": "172.21.16.82",
+			"Port": 22,
+			"User": "root",
+			"Password": "HanZheng2019",
+			"IsMaster": false,
+			"SlaveNumber": 4,
+			"ClusterID": 2
+		}
+	],
+	"CHAIN_SIZE": 512,
+	"SHARD_SIZE": 1,
+	"ExtraClusterConfig": {
+		"TargetRootBlockTime": 20,
+		"TargetMinorBlockTime": 4,
+		"GasLimit": 96000000
+	}
 }
